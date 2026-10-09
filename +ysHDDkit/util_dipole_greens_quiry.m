@@ -41,18 +41,6 @@ if use_parallel
     fetchOutputs(setup_job);
 end
 
-
-    if nargin < 4
-        use_parallel = false;
-    end
-    validateattributes(use_parallel, {'logical'}, {'scalar'}, ...
-        mfilename, 'use_parallel');
-    
-    % INSERT THE REPLACEMENT BLOCK HERE
-    
-    numAll = size(quiry, 2);
-
-
     numAll = size(quiry, 2);
     if size(src_info.loc, 1) == 1
         source_points = repmat(src_info.loc(:), 1, numAll);
@@ -124,3 +112,4 @@ function setup_green_worker(worker_root, toolkit_dir)
 
     cd(worker_dir);
 end
+

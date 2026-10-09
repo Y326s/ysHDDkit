@@ -11,7 +11,7 @@ ft2m = 0.3048;
 % 1. Load the .mat file
 % =========================================================
 % dir = './field_mat/';
-comout = load([dir filename]);
+comout = load(fullfile(dir, filename));
 
 % =========================================================
 % 2. Read grid coordinates

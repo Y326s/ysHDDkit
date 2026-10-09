@@ -10,7 +10,7 @@ function util_write_TR_file(dir, filename, TRconfig)
     % Each column of TR file is stored as a 1D MATLAB vector
     % Check input sizes
     % =========================================================
-    if ~(numel(TRconfig.tx_y)==TRconfig.nTx && numel(TRconfig.tx_z)==TRconfig.nTx && numel(TRconfig.tx_p)==TRconfig.nTx)
+    if ~(numel(TRconfig.tx_x)==TRconfig.nTx && numel(TRconfig.tx_y)==TRconfig.nTx && numel(TRconfig.tx_z)==TRconfig.nTx && numel(TRconfig.tx_p)==TRconfig.nTx)
         error('Transmitter vectors must all have the same length.');
     end
 

@@ -5,7 +5,7 @@ function [G_cpp, F_cpp] = util_read_cpp_result(dir, filename)
 % 1. Load the .mat file
 % =========================================================
 % dir = './field_mat/';
-cppout = load([dir filename]);
+cppout = load(fullfile(dir, filename));
 
 % =========================================================
 % 2. Read grid coordinates

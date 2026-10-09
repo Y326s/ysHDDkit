@@ -11,6 +11,8 @@ function [lambda, sd, induction] = util_skin_depth_v2(freq,epr,sig,r)
     lambda = 2*pi/beta;
 
     induction = 2*pi*freq*mu0*(sig)*(r)^2;
-    sig./(2*pi*freq*ep0*epr)
+    fprintf('Good conductor factor: %4.4f', sig./(2*pi*freq*ep0*epr))
+
+    
 
 end
